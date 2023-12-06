@@ -22,13 +22,14 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div className="container ">
       <h2>Shopping Cart</h2>
       <ul>
         {cartItems.map((item) => (
           <li key={item.productId}>
             {item.quantity} x Product {item.productId}{" "}
             <button
+              className="btn btn-primary"
               onClick={() =>
                 handleUpdateQuantity(item.productId, item.quantity + 1)
               }
@@ -37,6 +38,7 @@ const Cart = () => {
             </button>
             &nbsp;
             <button
+              className="btn btn-primary"
               onClick={() =>
                 handleUpdateQuantity(item.productId, item.quantity - 1)
               }
@@ -44,7 +46,10 @@ const Cart = () => {
               -
             </button>
             &nbsp;
-            <button onClick={() => handleRemoveFromCart(item.productId)}>
+            <button
+              className="btn btn-primary"
+              onClick={() => handleRemoveFromCart(item.productId)}
+            >
               Remove
             </button>
           </li>

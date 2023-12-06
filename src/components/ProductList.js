@@ -26,14 +26,18 @@ function ProductList() {
 
   return (
     <div>
-      <div>
+      <div className="container ">
         <h2>Product List</h2>
-        <ul>
+        &nbsp;&nbsp;
+        <ul className="list-group">
           {products.map((product) => (
-            <li key={product.id}>
+            <li key={product.id} className="list-group-item">
               {product.name} - {product.price} - {product.category}
-              &nbsp;&nbsp;{" "}
-              <button onClick={() => handleAddToCart(product.id)}>
+              &nbsp;&nbsp;
+              <button
+                className="btn btn-primary"
+                onClick={() => handleAddToCart(product.id)}
+              >
                 Add to Cart
               </button>
             </li>

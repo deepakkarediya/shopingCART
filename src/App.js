@@ -7,10 +7,10 @@ import "./App.css";
 function App() {
   return (
     <Provider store={store}>
-      <div>
+      <div className="container">
         <ProductList />
-        <Cart />
       </div>
+      <Cart />
     </Provider>
   );
 }
